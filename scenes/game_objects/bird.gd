@@ -1,0 +1,44 @@
+extends Area2D
+
+
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var game_manager: Node = %GameManager
+
+const SPEED = 100.0 # Bird's speed
+var direction = -1.0 # Bird's starting direction
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	position.x += direction * SPEED * delta
+
+
+# Flip moving direction
+func _on_timer_timeout() -> void:
+	direction *= -1
+	animated_sprite_2d.flip_h = !animated_sprite_2d.flip_h
+
+
+# If colliding with player
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "MainCharacter":
+		# Check if the player is above or at the side of the bird
+		var y_delta = position.y - body.position.y
+		var x_delta = body.position.x - position.x
+		
+		# If player's vertical position is not 0 and body is towards the enemy
+		if (y_delta > 0 && body.velocity.y > 0):
+			# Remove enemy and add point
+			queue_free()
+			game_manager.add_point()
+		else:
+			# Deacrease player's health
+			game_manager.decrease_health()
+			if (x_delta < 0):
+				body.jump_side(500)
+			else:
+				body.jump_side(-500)

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://beievqrauhr3r"]
+
+[ext_resource type="AudioStream" uid="uid://lljqib4yc8tw" path="res://assets/music/akira.mp3" id="1_0rulj"]
+
+[node name="Node" type="Node"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0rulj")
+volume_db = 24.0
+autoplay = true
