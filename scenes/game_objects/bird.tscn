@@ -130,7 +130,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"dying"
 autoplay = "default"
-frame_progress = 0.6696097
+frame_progress = 0.843326
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956626269]
 position = Vector2(9, 2)

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dtupdt6cy0tve" path="res://scenes/game_objects/duck.tscn" id="10_bo4dx"]
 [ext_resource type="Script" uid="uid://baaejn5brmhh6" path="res://scenes/game_objects/fall_area.gd" id="11_8g4ke"]
 [ext_resource type="Texture2D" uid="uid://dsnkd0k8q8usn" path="res://assets/game_elements/heart.png" id="11_76toy"]
+[ext_resource type="FontFile" uid="uid://dfypm6v7ubpl6" path="res://assets/PlaypenSans-Regular.ttf" id="12_hgky1"]
 [ext_resource type="PackedScene" uid="uid://br76245etusar" path="res://scenes/game_objects/bird.tscn" id="13_b4tpv"]
 [ext_resource type="Script" uid="uid://clbaj144ur12g" path="res://scenes/levels/pause.gd" id="13_hgky1"]
 
@@ -381,6 +382,7 @@ anchor_bottom = 1.7820001
 offset_bottom = -59.432007
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 30
 text = "Points: 0"
 horizontal_alignment = 1
@@ -447,7 +449,6 @@ script = ExtResource("13_hgky1")
 
 [node name="PausePanel" type="Panel" parent="PausePanel/Pause" unique_id=1075580378]
 unique_name_in_owner = true
-visible = false
 offset_left = 2.0
 offset_top = -1.0
 offset_right = 902.0
@@ -457,6 +458,7 @@ offset_bottom = 628.0
 layout_mode = 0
 offset_right = 898.0
 offset_bottom = 147.0
+theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 60
 text = "GAME PAUSED"
 horizontal_alignment = 1
@@ -480,12 +482,14 @@ theme_override_constants/separation = 40
 [node name="Resume" type="Button" parent="PausePanel/Pause/PausePanel/VBoxContainer" unique_id=1222434183]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 30
 text = "RESUME"
 
 [node name="Back" type="Button" parent="PausePanel/Pause/PausePanel/VBoxContainer" unique_id=1551032964]
 process_mode = 3
 layout_mode = 2
+theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 30
 text = "BACK TO MENU
 "

@@ -13,7 +13,7 @@ func _on_body_entered(body: Node) -> void:
 		if (y_delta < -350 && y_delta > -410):
 			# Remove enemy and add point
 			animated_sprite_2d.animation = "dying"
-			await get_tree().create_timer(0.4).timeout
+			await get_tree().create_timer(0.3).timeout
 			queue_free()
 			game_manager.add_point()
 		else:
