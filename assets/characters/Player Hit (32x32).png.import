@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://disx7bfvifo5v"
-path="res://.godot/imported/cooltext.png-91d7e24caa42df6345b6bba4bf84a823.ctex"
+uid="uid://r1tnq6wrn3qh"
+path="res://.godot/imported/Player Hit (32x32).png-63524a767f4291b70e03f69037683910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/menu/cooltext.png"
-dest_files=["res://.godot/imported/cooltext.png-91d7e24caa42df6345b6bba4bf84a823.ctex"]
+source_file="res://assets/characters/Player Hit (32x32).png"
+dest_files=["res://.godot/imported/Player Hit (32x32).png-63524a767f4291b70e03f69037683910.ctex"]
 
 [params]
 

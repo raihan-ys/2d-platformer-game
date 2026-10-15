@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b16gjgmpeke8e"]
+[gd_scene format=3 uid="uid://b16gjgmpeke8e"]
 
 [ext_resource type="Script" uid="uid://cvkhmxvg2bie2" path="res://scenes/menu/main_menu.gd" id="1_8ln24"]
 [ext_resource type="Texture2D" uid="uid://c88eyevot146e" path="res://assets/background/Brown.png" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://disx7bfvifo5v" path="res://assets/menu/cooltext.png" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://efs545wk8ybp" path="res://assets/terrain/Terrain (16x16).png" id="3_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://dj0akkaln7djy" path="res://scenes/game_objects/main_character.tscn" id="4_wu84c"]
+[ext_resource type="Texture2D" uid="uid://ck7oyncekqma1" path="res://assets/menu/title.png" id="3_hj162"]
+[ext_resource type="Texture2D" uid="uid://btqquwgp37hem" path="res://assets/menu/subtitle.png" id="3_xn6kt"]
+[ext_resource type="PackedScene" uid="uid://dj0akkaln7djy" path="res://scenes/game_objects/player.tscn" id="4_wu84c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wu84c"]
 texture = ExtResource("3_bqqt6")
@@ -171,31 +172,45 @@ texture = ExtResource("3_bqqt6")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_wu84c")
 
-[node name="main_menu" type="Node"]
+[node name="main_menu" type="Node" unique_id=2059307301]
 script = ExtResource("1_8ln24")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=951018564]
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ekxnf")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=2117205036]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 305.0
+offset_top = 233.0
+offset_right = -316.0
+offset_bottom = -332.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xn6kt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1700326145]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -341.0
-offset_top = 180.0
-offset_right = 338.0
-offset_bottom = 247.0
+offset_left = -339.5
+offset_top = 64.0
+offset_right = 339.5
+offset_bottom = 252.0
 grow_horizontal = 2
-texture = ExtResource("1_l6cm7")
+texture = ExtResource("3_hj162")
 
-[node name="Level1" type="Button" parent="."]
+[node name="Level1" type="Button" parent="." unique_id=381045209]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -210,7 +225,7 @@ theme_override_font_sizes/font_size = 30
 text = "Level 1
 "
 
-[node name="Level2" type="Button" parent="."]
+[node name="Level2" type="Button" parent="." unique_id=1472053231]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -226,14 +241,14 @@ theme_override_font_sizes/font_size = 30
 text = "Level 2
 "
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=185359547]
 position = Vector2(2, 1)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_8ln24")
 format = 2
 layer_0/tile_data = PackedInt32Array(851968, 1114112, 1, 851969, 1179648, 1, 851970, 1179648, 1, 851971, 1179648, 1, 851972, 1179648, 1, 851973, 1179648, 1, 851974, 1179648, 1, 851975, 1179648, 1, 851976, 1179648, 1, 851977, 1179648, 1, 851978, 1179648, 1, 851979, 1179648, 1, 851980, 1179648, 1, 851981, 1179648, 1, 851982, 1179648, 1, 851983, 1179648, 1, 851984, 1179648, 1, 851985, 1179648, 1, 851986, 1179648, 1, 851987, 1179648, 1, 851988, 1179648, 1, 851989, 1179648, 1, 851990, 1179648, 1, 851991, 1245184, 1, 851967, 0, 6, 786431, 0, 5, 720895, 0, 5, 655359, 0, 5, 589823, 0, 5, 524287, 0, 5, 458751, 0, 5, 393215, 0, 5, 327679, 0, 5, 262143, 0, 5, 196607, 0, 5, 131071, 0, 5, 65535, 0, 5, -1, 0, 4, -65536, 65536, 4, -65535, 65536, 4, -65534, 65536, 4, -65533, 65536, 4, -65532, 65536, 4, -65531, 65536, 4, -65530, 65536, 4, -65529, 65536, 4, -65528, 65536, 4, -65527, 65536, 4, -65526, 65536, 4, -65525, 65536, 4, -65524, 65536, 4, -65523, 65536, 4, -65522, 65536, 4, -65521, 65536, 4, -65520, 65536, 4, -65519, 65536, 4, -65518, 65536, 4, -65517, 65536, 4, -65516, 65536, 4, -65515, 65536, 4, -65514, 65536, 4, -65513, 65536, 4, -65512, 131072, 4, 24, 131072, 5, 65560, 131072, 5, 131096, 131072, 5, 196632, 131072, 5, 262168, 131072, 5, 327704, 131072, 5, 393240, 131072, 5, 458776, 131072, 5, 524312, 131072, 5, 589848, 131072, 5, 655384, 131072, 5, 720920, 131072, 5, 786456, 131072, 6)
 
-[node name="MainCharacter" parent="." instance=ExtResource("4_wu84c")]
+[node name="Player" parent="." unique_id=192613662 instance=ExtResource("4_wu84c")]
 position = Vector2(-18, 507.00003)
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]

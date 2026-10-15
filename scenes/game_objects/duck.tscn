@@ -81,13 +81,13 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3awl"]
-size = Vector2(60, 60)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl057"]
-size = Vector2(62, 62)
+size = Vector2(60, 38)
 
-[node name="Duck" type="RigidBody2D" unique_id=1564763874]
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 16.03122
+
+[node name="Duck" type="Area2D" unique_id=1482597663]
 script = ExtResource("1_7xl1o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=802622317]
@@ -97,15 +97,12 @@ scale = Vector2(1.8888866, 1.8749999)
 sprite_frames = SubResource("SpriteFrames_1ooyw")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384284986]
-position = Vector2(724, 501)
-shape = SubResource("RectangleShape2D_u3awl")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1559740250]
-position = Vector2(634, 473)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=929949062]
-position = Vector2(90, 28)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669785349]
+position = Vector2(724, 512)
 shape = SubResource("RectangleShape2D_nl057")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1490633049]
+position = Vector2(718, 492)
+shape = SubResource("CircleShape2D_xrivr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -74,8 +74,11 @@ animations = [{
 "speed": 18.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ngmh"]
-size = Vector2(90, 71)
+[sub_resource type="CircleShape2D" id="CircleShape2D_nfihu"]
+radius = 38.052597
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(24, 38.5)
 
 [node name="Bird" type="Area2D" unique_id=1068919780]
 script = ExtResource("1_q54km")
@@ -87,12 +90,16 @@ sprite_frames = SubResource("SpriteFrames_xrivr")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956626269]
-position = Vector2(1, 1.5)
-shape = SubResource("RectangleShape2D_3ngmh")
+position = Vector2(9, 2)
+shape = SubResource("CircleShape2D_nfihu")
 
 [node name="Timer" type="Timer" parent="." unique_id=313160880]
 wait_time = 2.0
 autostart = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1286032107]
+position = Vector2(-33, 1.75)
+shape = SubResource("RectangleShape2D_xrivr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

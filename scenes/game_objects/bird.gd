@@ -3,6 +3,7 @@ extends Area2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var game_manager: Node = %GameManager
+@onready var player: Node = $"../../SceneObjects/Player"
 
 const SPEED = 100.0 # Bird's speed
 var direction = -1.0 # Bird's starting direction
@@ -25,7 +26,7 @@ func _on_timer_timeout() -> void:
 
 # If colliding with player
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "MainCharacter":
+	if body.name == "Player" :
 		# Check if the player is above or at the side of the bird
 		var y_delta = position.y - body.position.y
 		var x_delta = body.position.x - position.x
@@ -37,7 +38,7 @@ func _on_body_entered(body: Node2D) -> void:
 			game_manager.add_point()
 		else:
 			# Deacrease player's health
-			game_manager.decrease_health()
+			player.decrease_health()
 			if (x_delta < 0):
 				body.jump_side(500)
 			else:

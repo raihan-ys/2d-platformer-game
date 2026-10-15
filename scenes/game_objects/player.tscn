@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dj0akkaln7djy"]
 
-[ext_resource type="Script" uid="uid://hns0ijtra404" path="res://scenes/game_objects/main_character.gd" id="1_ig48j"]
-[ext_resource type="Texture2D" uid="uid://c0iwuuuoigrjn" path="res://assets/characters/Main Jump (32x32).png" id="1_nrcqd"]
-[ext_resource type="Texture2D" uid="uid://i4y60vvditxl" path="res://assets/characters/Main Idle (32x32).png" id="2_e6tc2"]
-[ext_resource type="Texture2D" uid="uid://r1tnq6wrn3qh" path="res://assets/characters/Main Hit (32x32).png" id="3_3ngmh"]
-[ext_resource type="Texture2D" uid="uid://0lpdhr4j7n30" path="res://assets/characters/Main Run (32x32).png" id="4_k0aba"]
+[ext_resource type="Script" uid="uid://hns0ijtra404" path="res://scenes/game_objects/player.gd" id="1_ig48j"]
+[ext_resource type="Texture2D" uid="uid://c0iwuuuoigrjn" path="res://assets/characters/Player Jump (32x32).png" id="1_nrcqd"]
+[ext_resource type="Texture2D" uid="uid://i4y60vvditxl" path="res://assets/characters/Player Idle (32x32).png" id="2_e6tc2"]
+[ext_resource type="Texture2D" uid="uid://r1tnq6wrn3qh" path="res://assets/characters/Player Hit (32x32).png" id="3_3ngmh"]
+[ext_resource type="Texture2D" uid="uid://0lpdhr4j7n30" path="res://assets/characters/Player Run (32x32).png" id="4_k0aba"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ogw1n"]
 atlas = ExtResource("2_e6tc2")

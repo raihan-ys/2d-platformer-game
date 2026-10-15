@@ -3,13 +3,30 @@ extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
+var lives = 3
 var alive = true
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@export var hearts : Array[Node]
 
+func decrease_health():
+	lives -= 1
+	
+	# Decrease heart images
+	for h in 3:
+		if (h < lives):
+			hearts[h].show()
+		else:
+			hearts[h].hide()
+	if (lives == 0):
+		alive = false
 
 func _physics_process(delta: float) -> void:
-	if !alive:
-		return
+	# Check if player alive
+	if (!alive) :
+		sprite_2d.animation = "dying"
+		await get_tree().create_timer(2.0).timeout
+		get_tree().reload_current_scene()
+		
 	# Animations
 	if (velocity.x > 1 || velocity.x < -1) :
 		sprite_2d.animation = "running"
@@ -43,7 +60,3 @@ func _physics_process(delta: float) -> void:
 func jump_side(x):
 	velocity.y = JUMP_VELOCITY
 	velocity.x = x
-
-func die() -> void:
-	sprite_2d.animation = "dying"
-	sprite_2d.play("dying")
