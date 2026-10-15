@@ -34,6 +34,8 @@ func _on_body_entered(body: Node2D) -> void:
 		# If player's vertical position is not 0 and body is towards the enemy
 		if (y_delta > 0 && body.velocity.y > 0):
 			# Remove enemy and add point
+			animated_sprite_2d.animation = "dying"
+			await get_tree().create_timer(0.4).timeout
 			queue_free()
 			game_manager.add_point()
 		else:

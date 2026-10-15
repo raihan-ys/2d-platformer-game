@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://lwx7p5efvlms" path="res://scenes/game_objects/finish.tscn" id="7_mw4xc"]
 [ext_resource type="PackedScene" uid="uid://b16gjgmpeke8e" path="res://scenes/menu/main_menu.tscn" id="7_xa7n4"]
 [ext_resource type="Script" uid="uid://daojo7uhy2r4m" path="res://scenes/game_objects/game_manager.gd" id="8_r8rrl"]
-[ext_resource type="Texture2D" uid="uid://csjunb5bfwswy" path="res://assets/characters/Dwi.png" id="9_bo4dx"]
 [ext_resource type="PackedScene" uid="uid://dtupdt6cy0tve" path="res://scenes/game_objects/duck.tscn" id="10_bo4dx"]
 [ext_resource type="Script" uid="uid://baaejn5brmhh6" path="res://scenes/game_objects/fall_area.gd" id="11_8g4ke"]
 [ext_resource type="Texture2D" uid="uid://dsnkd0k8q8usn" path="res://assets/game_elements/heart.png" id="11_76toy"]
@@ -355,12 +354,11 @@ position = Vector2(1501, 437)
 [node name="Collectible31" parent="SceneObjects/CollectiblesGroup" unique_id=1239042569 instance=ExtResource("7_hrcei")]
 position = Vector2(2031, 99)
 
-[node name="Dwi" type="CharacterBody2D" parent="SceneObjects" unique_id=1784423062]
+[node name="Collectible32" parent="SceneObjects/CollectiblesGroup" unique_id=1117139821 instance=ExtResource("7_hrcei")]
+position = Vector2(1050, 532)
 
-[node name="Sprite2D" type="Sprite2D" parent="SceneObjects/Dwi" unique_id=21457401]
-position = Vector2(1116.5, 530.875)
-scale = Vector2(0.42200017, 0.37550002)
-texture = ExtResource("9_bo4dx")
+[node name="Collectible33" parent="SceneObjects/CollectiblesGroup" unique_id=1439666787 instance=ExtResource("7_hrcei")]
+position = Vector2(1105, 532)
 
 [node name="GameManager" type="Node" parent="." unique_id=108899223]
 unique_name_in_owner = true

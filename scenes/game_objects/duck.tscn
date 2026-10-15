@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4myptp84lft7" path="res://scenes/game_objects/duck.gd" id="1_7xl1o"]
 [ext_resource type="Texture2D" uid="uid://c14128287bjx0" path="res://assets/characters/Duck Idle (36x36).png" id="1_ql0qm"]
+[ext_resource type="Texture2D" uid="uid://rpi8r3rg6t2r" path="res://assets/characters/Duck Hit (36x36).png" id="3_c4c6u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ku1j"]
 atlas = ExtResource("1_ql0qm")
@@ -43,6 +44,26 @@ region = Rect2(288, 0, 36, 36)
 atlas = ExtResource("1_ql0qm")
 region = Rect2(324, 0, 36, 36)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oqff"]
+atlas = ExtResource("3_c4c6u")
+region = Rect2(144, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g21ld"]
+atlas = ExtResource("3_c4c6u")
+region = Rect2(108, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohucv"]
+atlas = ExtResource("3_c4c6u")
+region = Rect2(72, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dgfr"]
+atlas = ExtResource("3_c4c6u")
+region = Rect2(36, 0, 36, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i13cb"]
+atlas = ExtResource("3_c4c6u")
+region = Rect2(0, 0, 36, 36)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_1ooyw"]
 animations = [{
 "frames": [{
@@ -79,6 +100,26 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oqff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g21ld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohucv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dgfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i13cb")
+}],
+"loop": 1,
+"name": &"dying",
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nl057"]
@@ -95,7 +136,9 @@ texture_filter = 1
 position = Vector2(724, 497)
 scale = Vector2(1.8888866, 1.8749999)
 sprite_frames = SubResource("SpriteFrames_1ooyw")
+animation = &"dying"
 autoplay = "default"
+frame_progress = 0.9918356
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669785349]
 position = Vector2(724, 512)

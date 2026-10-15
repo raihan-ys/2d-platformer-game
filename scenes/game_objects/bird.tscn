@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3wivhlqqq85o" path="res://assets/characters/Bird Flying (32x32).png" id="1_48cs1"]
 [ext_resource type="Script" uid="uid://cb2s51tlemi12" path="res://scenes/game_objects/bird.gd" id="1_q54km"]
+[ext_resource type="Texture2D" uid="uid://1n5nf7ubqqcu" path="res://assets/characters/Bird Hit (32x32).png" id="3_p45gx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3po83"]
 atlas = ExtResource("1_48cs1")
@@ -39,6 +40,26 @@ region = Rect2(224, 0, 32, 32)
 atlas = ExtResource("1_48cs1")
 region = Rect2(256, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wukqb"]
+atlas = ExtResource("3_p45gx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smjim"]
+atlas = ExtResource("3_p45gx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ik3"]
+atlas = ExtResource("3_p45gx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7buf7"]
+atlas = ExtResource("3_p45gx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbypw"]
+atlas = ExtResource("3_p45gx")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
 animations = [{
 "frames": [{
@@ -72,6 +93,26 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 18.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wukqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smjim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ik3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7buf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbypw")
+}],
+"loop": 1,
+"name": &"dying",
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nfihu"]
@@ -87,7 +128,9 @@ script = ExtResource("1_q54km")
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"dying"
 autoplay = "default"
+frame_progress = 0.6696097
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=956626269]
 position = Vector2(9, 2)
