@@ -226,6 +226,9 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bo4dx"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7nsj"]
+bg_color = Color(0.7254902, 0.13725491, 0.09803922, 1)
+
 [node name="Node" type="Node" unique_id=1705300214]
 
 [node name="SceneObjects" type="Node" parent="." unique_id=39354652]
@@ -449,10 +452,13 @@ script = ExtResource("13_hgky1")
 
 [node name="PausePanel" type="Panel" parent="PausePanel/Pause" unique_id=1075580378]
 unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0.47058824)
 offset_left = 2.0
 offset_top = -1.0
 offset_right = 902.0
 offset_bottom = 628.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7nsj")
 
 [node name="Label" type="Label" parent="PausePanel/Pause/PausePanel" unique_id=988589775]
 layout_mode = 0
