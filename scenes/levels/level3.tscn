@@ -169,7 +169,7 @@ tile_set = SubResource("TileSet_02w4s")
 
 [node name="Player" parent="." unique_id=461984618 node_paths=PackedStringArray("hearts") instance=ExtResource("3_sru4k")]
 position = Vector2(194, 508)
-hearts = [NodePath(""), NodePath(""), NodePath("")]
+hearts = [null, null, null]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=227944024]
 position = Vector2(25.666672, 25.333328)
