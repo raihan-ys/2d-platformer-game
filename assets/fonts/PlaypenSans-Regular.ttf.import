@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dfypm6v7ubpl6"
-path="res://.godot/imported/PlaypenSans-Regular.ttf-90172a02a29969686fc763d9d06f970a.fontdata"
+path="res://.godot/imported/PlaypenSans-Regular.ttf-e2c17e705f5825cc7c64f65eda82baca.fontdata"
 
 [deps]
 
-source_file="res://assets/PlaypenSans-Regular.ttf"
-dest_files=["res://.godot/imported/PlaypenSans-Regular.ttf-90172a02a29969686fc763d9d06f970a.fontdata"]
+source_file="res://assets/fonts/PlaypenSans-Regular.ttf"
+dest_files=["res://.godot/imported/PlaypenSans-Regular.ttf-e2c17e705f5825cc7c64f65eda82baca.fontdata"]
 
 [params]
 
