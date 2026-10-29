@@ -261,7 +261,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
 [node name="Finish" parent="SceneObjects" unique_id=424882890 instance=ExtResource("7_mw4xc")]
-position = Vector2(2721, 178)
+position = Vector2(345, 469)
 target_level = ExtResource("5_hgky1")
 
 [node name="CollectiblesGroup" type="Node" parent="SceneObjects" unique_id=1696955852]
