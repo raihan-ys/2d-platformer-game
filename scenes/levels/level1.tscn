@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtupdt6cy0tve" path="res://scenes/game_objects/duck.tscn" id="7_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://lwx7p5efvlms" path="res://scenes/game_objects/finish.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dmb473ceptwjo" path="res://scenes/levels/level2.tscn" id="8_conm7"]
-[ext_resource type="Texture2D" uid="uid://dsnkd0k8q8usn" path="res://assets/game_elements/heart.png" id="10_d3jkd"]
+[ext_resource type="Texture2D" uid="uid://dsnkd0k8q8usn" path="res://assets/game_elements/Heart.png" id="10_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://br76245etusar" path="res://scenes/game_objects/bird.tscn" id="10_nfihu"]
 [ext_resource type="FontFile" uid="uid://dfypm6v7ubpl6" path="res://assets/fonts/PlaypenSans-Regular.ttf" id="11_nfihu"]
 [ext_resource type="Script" uid="uid://clbaj144ur12g" path="res://scenes/levels/pause.gd" id="12_nfihu"]
