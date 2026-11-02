@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dudh1ev8js2pb"]
 
-[ext_resource type="Texture2D" uid="uid://d3birh67n8e6p" path="res://assets/game_elements/Spikes.png" id="1_7yfqu"]
+[ext_resource type="Texture2D" uid="uid://d3birh67n8e6p" path="res://assets/traps/Spikes.png" id="1_7yfqu"]
 [ext_resource type="Script" uid="uid://cnpdxl0i03pem" path="res://scenes/game_objects/spike.gd" id="1_bbjga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7yfqu"]
