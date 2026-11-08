@@ -229,7 +229,7 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7nsj"]
 bg_color = Color(0.7254902, 0.13725491, 0.09803922, 1)
 
-[node name="Node" type="Node" unique_id=1705300214]
+[node name="Level2" type="Node" unique_id=1705300214]
 
 [node name="SceneObjects" type="Node" parent="." unique_id=39354652]
 
@@ -264,105 +264,105 @@ position_smoothing_speed = 7.0
 position = Vector2(345, 469)
 target_level = ExtResource("5_hgky1")
 
-[node name="CollectiblesGroup" type="Node" parent="SceneObjects" unique_id=1696955852]
+[node name="Collectibles" type="Node" parent="SceneObjects" unique_id=1696955852]
 
-[node name="Collectible" parent="SceneObjects/CollectiblesGroup" unique_id=1477044194 instance=ExtResource("7_hrcei")]
+[node name="Collectible" parent="SceneObjects/Collectibles" unique_id=1477044194 instance=ExtResource("7_hrcei")]
 position = Vector2(22, 288)
 
-[node name="Collectible2" parent="SceneObjects/CollectiblesGroup" unique_id=1360553257 instance=ExtResource("7_hrcei")]
+[node name="Collectible2" parent="SceneObjects/Collectibles" unique_id=1360553257 instance=ExtResource("7_hrcei")]
 position = Vector2(80, 289)
 
-[node name="Collectible3" parent="SceneObjects/CollectiblesGroup" unique_id=1515456184 instance=ExtResource("7_hrcei")]
+[node name="Collectible3" parent="SceneObjects/Collectibles" unique_id=1515456184 instance=ExtResource("7_hrcei")]
 position = Vector2(141, 287)
 
-[node name="Collectible4" parent="SceneObjects/CollectiblesGroup" unique_id=2119558040 instance=ExtResource("7_hrcei")]
+[node name="Collectible4" parent="SceneObjects/Collectibles" unique_id=2119558040 instance=ExtResource("7_hrcei")]
 position = Vector2(683, 481)
 
-[node name="Collectible5" parent="SceneObjects/CollectiblesGroup" unique_id=380125761 instance=ExtResource("7_hrcei")]
+[node name="Collectible5" parent="SceneObjects/Collectibles" unique_id=380125761 instance=ExtResource("7_hrcei")]
 position = Vector2(727, 290)
 
-[node name="Collectible6" parent="SceneObjects/CollectiblesGroup" unique_id=533388696 instance=ExtResource("7_hrcei")]
+[node name="Collectible6" parent="SceneObjects/Collectibles" unique_id=533388696 instance=ExtResource("7_hrcei")]
 position = Vector2(676, 290)
 
-[node name="Collectible7" parent="SceneObjects/CollectiblesGroup" unique_id=1326765770 instance=ExtResource("7_hrcei")]
+[node name="Collectible7" parent="SceneObjects/Collectibles" unique_id=1326765770 instance=ExtResource("7_hrcei")]
 position = Vector2(628, 290)
 
-[node name="Collectible8" parent="SceneObjects/CollectiblesGroup" unique_id=318926447 instance=ExtResource("7_hrcei")]
+[node name="Collectible8" parent="SceneObjects/Collectibles" unique_id=318926447 instance=ExtResource("7_hrcei")]
 position = Vector2(682, 437)
 
-[node name="Collectible9" parent="SceneObjects/CollectiblesGroup" unique_id=1684603659 instance=ExtResource("7_hrcei")]
+[node name="Collectible9" parent="SceneObjects/Collectibles" unique_id=1684603659 instance=ExtResource("7_hrcei")]
 position = Vector2(780, 53)
 
-[node name="Collectible10" parent="SceneObjects/CollectiblesGroup" unique_id=1621412467 instance=ExtResource("7_hrcei")]
+[node name="Collectible10" parent="SceneObjects/Collectibles" unique_id=1621412467 instance=ExtResource("7_hrcei")]
 position = Vector2(828, 54)
 
-[node name="Collectible11" parent="SceneObjects/CollectiblesGroup" unique_id=1462918431 instance=ExtResource("7_hrcei")]
+[node name="Collectible11" parent="SceneObjects/Collectibles" unique_id=1462918431 instance=ExtResource("7_hrcei")]
 position = Vector2(874, 54)
 
-[node name="Collectible12" parent="SceneObjects/CollectiblesGroup" unique_id=169566047 instance=ExtResource("7_hrcei")]
+[node name="Collectible12" parent="SceneObjects/Collectibles" unique_id=169566047 instance=ExtResource("7_hrcei")]
 position = Vector2(1308, 383)
 
-[node name="Collectible13" parent="SceneObjects/CollectiblesGroup" unique_id=1232175610 instance=ExtResource("7_hrcei")]
+[node name="Collectible13" parent="SceneObjects/Collectibles" unique_id=1232175610 instance=ExtResource("7_hrcei")]
 position = Vector2(1308, 333)
 
-[node name="Collectible14" parent="SceneObjects/CollectiblesGroup" unique_id=339440277 instance=ExtResource("7_hrcei")]
+[node name="Collectible14" parent="SceneObjects/Collectibles" unique_id=339440277 instance=ExtResource("7_hrcei")]
 position = Vector2(931, 194)
 
-[node name="Collectible15" parent="SceneObjects/CollectiblesGroup" unique_id=477064495 instance=ExtResource("7_hrcei")]
+[node name="Collectible15" parent="SceneObjects/Collectibles" unique_id=477064495 instance=ExtResource("7_hrcei")]
 position = Vector2(978, 191)
 
-[node name="Collectible16" parent="SceneObjects/CollectiblesGroup" unique_id=1377963572 instance=ExtResource("7_hrcei")]
+[node name="Collectible16" parent="SceneObjects/Collectibles" unique_id=1377963572 instance=ExtResource("7_hrcei")]
 position = Vector2(1351, 46)
 
-[node name="Collectible17" parent="SceneObjects/CollectiblesGroup" unique_id=963846073 instance=ExtResource("7_hrcei")]
+[node name="Collectible17" parent="SceneObjects/Collectibles" unique_id=963846073 instance=ExtResource("7_hrcei")]
 position = Vector2(1405, 46)
 
-[node name="Collectible18" parent="SceneObjects/CollectiblesGroup" unique_id=971116478 instance=ExtResource("7_hrcei")]
+[node name="Collectible18" parent="SceneObjects/Collectibles" unique_id=971116478 instance=ExtResource("7_hrcei")]
 position = Vector2(1452, 98)
 
-[node name="Collectible19" parent="SceneObjects/CollectiblesGroup" unique_id=715789168 instance=ExtResource("7_hrcei")]
+[node name="Collectible19" parent="SceneObjects/Collectibles" unique_id=715789168 instance=ExtResource("7_hrcei")]
 position = Vector2(2314, 433)
 
-[node name="Collectible20" parent="SceneObjects/CollectiblesGroup" unique_id=320867143 instance=ExtResource("7_hrcei")]
+[node name="Collectible20" parent="SceneObjects/Collectibles" unique_id=320867143 instance=ExtResource("7_hrcei")]
 position = Vector2(2363, 433)
 
-[node name="Collectible21" parent="SceneObjects/CollectiblesGroup" unique_id=1411524457 instance=ExtResource("7_hrcei")]
+[node name="Collectible21" parent="SceneObjects/Collectibles" unique_id=1411524457 instance=ExtResource("7_hrcei")]
 position = Vector2(2313, 389)
 
-[node name="Collectible22" parent="SceneObjects/CollectiblesGroup" unique_id=1304191872 instance=ExtResource("7_hrcei")]
+[node name="Collectible22" parent="SceneObjects/Collectibles" unique_id=1304191872 instance=ExtResource("7_hrcei")]
 position = Vector2(2312, 343)
 
-[node name="Collectible23" parent="SceneObjects/CollectiblesGroup" unique_id=927162168 instance=ExtResource("7_hrcei")]
+[node name="Collectible23" parent="SceneObjects/Collectibles" unique_id=927162168 instance=ExtResource("7_hrcei")]
 position = Vector2(2361, 388)
 
-[node name="Collectible24" parent="SceneObjects/CollectiblesGroup" unique_id=1351070987 instance=ExtResource("7_hrcei")]
+[node name="Collectible24" parent="SceneObjects/Collectibles" unique_id=1351070987 instance=ExtResource("7_hrcei")]
 position = Vector2(2361, 342)
 
-[node name="Collectible25" parent="SceneObjects/CollectiblesGroup" unique_id=1591229819 instance=ExtResource("7_hrcei")]
+[node name="Collectible25" parent="SceneObjects/Collectibles" unique_id=1591229819 instance=ExtResource("7_hrcei")]
 position = Vector2(2505, 338)
 
-[node name="Collectible26" parent="SceneObjects/CollectiblesGroup" unique_id=1157557459 instance=ExtResource("7_hrcei")]
+[node name="Collectible26" parent="SceneObjects/Collectibles" unique_id=1157557459 instance=ExtResource("7_hrcei")]
 position = Vector2(2505, 294)
 
-[node name="Collectible27" parent="SceneObjects/CollectiblesGroup" unique_id=1089606585 instance=ExtResource("7_hrcei")]
+[node name="Collectible27" parent="SceneObjects/Collectibles" unique_id=1089606585 instance=ExtResource("7_hrcei")]
 position = Vector2(1887, 531)
 
-[node name="Collectible28" parent="SceneObjects/CollectiblesGroup" unique_id=69929467 instance=ExtResource("7_hrcei")]
+[node name="Collectible28" parent="SceneObjects/Collectibles" unique_id=69929467 instance=ExtResource("7_hrcei")]
 position = Vector2(1934, 531)
 
-[node name="Collectible29" parent="SceneObjects/CollectiblesGroup" unique_id=1270438398 instance=ExtResource("7_hrcei")]
+[node name="Collectible29" parent="SceneObjects/Collectibles" unique_id=1270438398 instance=ExtResource("7_hrcei")]
 position = Vector2(1979, 532)
 
-[node name="Collectible30" parent="SceneObjects/CollectiblesGroup" unique_id=1564352229 instance=ExtResource("7_hrcei")]
+[node name="Collectible30" parent="SceneObjects/Collectibles" unique_id=1564352229 instance=ExtResource("7_hrcei")]
 position = Vector2(1501, 437)
 
-[node name="Collectible31" parent="SceneObjects/CollectiblesGroup" unique_id=1239042569 instance=ExtResource("7_hrcei")]
+[node name="Collectible31" parent="SceneObjects/Collectibles" unique_id=1239042569 instance=ExtResource("7_hrcei")]
 position = Vector2(2031, 99)
 
-[node name="Collectible32" parent="SceneObjects/CollectiblesGroup" unique_id=1117139821 instance=ExtResource("7_hrcei")]
+[node name="Collectible32" parent="SceneObjects/Collectibles" unique_id=1117139821 instance=ExtResource("7_hrcei")]
 position = Vector2(1050, 532)
 
-[node name="Collectible33" parent="SceneObjects/CollectiblesGroup" unique_id=1439666787 instance=ExtResource("7_hrcei")]
+[node name="Collectible33" parent="SceneObjects/Collectibles" unique_id=1439666787 instance=ExtResource("7_hrcei")]
 position = Vector2(1105, 532)
 
 [node name="GameManager" type="Node" parent="." unique_id=108899223]
@@ -423,6 +423,14 @@ expand_mode = 2
 layout_mode = 2
 texture = ExtResource("11_76toy")
 expand_mode = 2
+
+[node name="Birds" type="Node" parent="." unique_id=1758645228]
+
+[node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("13_b4tpv")]
+position = Vector2(2226, 541)
+
+[node name="Bird2" parent="Birds" unique_id=1431351442 instance=ExtResource("13_b4tpv")]
+position = Vector2(549, 349)
 
 [node name="Ducks" type="Node" parent="." unique_id=925483895]
 
@@ -500,14 +508,6 @@ theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 30
 text = "BACK TO MENU
 "
-
-[node name="Birds" type="Node" parent="." unique_id=1758645228]
-
-[node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("13_b4tpv")]
-position = Vector2(2226, 541)
-
-[node name="Bird2" parent="Birds" unique_id=1431351442 instance=ExtResource("13_b4tpv")]
-position = Vector2(549, 349)
 
 [connection signal="body_entered" from="FallArea" to="FallArea" method="_on_body_entered"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Resume" to="PausePanel/Pause" method="_on_resume_pressed"]

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://btaxbnvjeb5xh"]
 
+[ext_resource type="Script" uid="uid://gti31180ixvq" path="res://scenes/game_objects/pig.gd" id="1_ihgkv"]
 [ext_resource type="Texture2D" uid="uid://dn4peraou7js5" path="res://assets/characters/Pig Run (36x30).png" id="1_po0dl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihgkv"]
@@ -98,12 +99,14 @@ animations = [{
 size = Vector2(268, 248)
 
 [node name="pig" type="Area2D" unique_id=369298452]
+script = ExtResource("1_ihgkv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=284936158]
 texture_filter = 1
 position = Vector2(164.5, 163.25)
 scale = Vector2(8, 8.706)
 sprite_frames = SubResource("SpriteFrames_yipwy")
+autoplay = "default"
 frame_progress = 0.7490535
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530348022]

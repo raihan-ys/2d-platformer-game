@@ -372,6 +372,14 @@ layout_mode = 2
 texture = ExtResource("10_d3jkd")
 expand_mode = 2
 
+[node name="Birds" type="Node" parent="." unique_id=1952633194]
+
+[node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("10_nfihu")]
+position = Vector2(662, 250)
+
+[node name="Bird2" parent="Birds" unique_id=2002062186 instance=ExtResource("10_nfihu")]
+position = Vector2(1617, 487)
+
 [node name="Ducks" type="Node" parent="." unique_id=1221487358]
 
 [node name="Duck" parent="Ducks" unique_id=1684398602 instance=ExtResource("7_d3jkd")]
@@ -437,14 +445,6 @@ theme_override_fonts/font = ExtResource("11_nfihu")
 theme_override_font_sizes/font_size = 30
 text = "BACK TO MENU
 "
-
-[node name="Birds" type="Node" parent="." unique_id=1952633194]
-
-[node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("10_nfihu")]
-position = Vector2(662, 250)
-
-[node name="Bird2" parent="Birds" unique_id=2002062186 instance=ExtResource("10_nfihu")]
-position = Vector2(1617, 487)
 
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Resume" to="PausePanel/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Back" to="PausePanel/Pause" method="_on_back_pressed"]
