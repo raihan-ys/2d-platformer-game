@@ -11,7 +11,7 @@ var direction = -1.0 # Pig's starting direction
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
-	
+
 
 # Flip moving direction
 func _on_timer_timeout() -> void:
@@ -29,8 +29,7 @@ func _on_body_entered(body: Node2D) -> void:
 		# If player's vertical position is not 0 and body is towards the enemy
 		if (y_delta > 0 && body.velocity.y > 0):
 			# Remove enemy and add point
-			# ERROR: change to dying animation
-			# animated_sprite_2d.animation = "dying"
+			animated_sprite_2d.animation = "dying"
 			await get_tree().create_timer(0.3).timeout
 			queue_free()
 			game_manager.add_point()

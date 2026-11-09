@@ -427,10 +427,18 @@ expand_mode = 2
 [node name="Birds" type="Node" parent="." unique_id=1758645228]
 
 [node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("13_b4tpv")]
-position = Vector2(2226, 541)
+position = Vector2(821, 151)
+
+[node name="Timer" type="Timer" parent="Birds/Bird" unique_id=760675135]
+wait_time = 5.0
+autostart = true
 
 [node name="Bird2" parent="Birds" unique_id=1431351442 instance=ExtResource("13_b4tpv")]
-position = Vector2(549, 349)
+position = Vector2(2359, 392)
+
+[node name="Timer" type="Timer" parent="Birds/Bird2" unique_id=259879598]
+wait_time = 6.300000000000001
+autostart = true
 
 [node name="Ducks" type="Node" parent="." unique_id=925483895]
 
@@ -509,6 +517,8 @@ theme_override_font_sizes/font_size = 30
 text = "BACK TO MENU
 "
 
+[connection signal="timeout" from="Birds/Bird/Timer" to="Birds/Bird" method="_on_timer_timeout"]
+[connection signal="timeout" from="Birds/Bird2/Timer" to="Birds/Bird2" method="_on_timer_timeout"]
 [connection signal="body_entered" from="FallArea" to="FallArea" method="_on_body_entered"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Resume" to="PausePanel/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Back" to="PausePanel/Pause" method="_on_back_pressed"]

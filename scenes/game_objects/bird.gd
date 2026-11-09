@@ -13,6 +13,11 @@ func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
 
 
+func _on_timer_timeout() -> void:
+	direction *= -1
+	animated_sprite_2d.flip_h = !animated_sprite_2d.flip_h
+
+
 # If colliding with player
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player" :

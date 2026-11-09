@@ -187,7 +187,7 @@ sources/0 = SubResource("TileSetAtlasSource_1bvp3")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkeig"]
 bg_color = Color(0.7254902, 0.13725491, 0.09803922, 1)
 
-[node name="Node" type="Node" unique_id=1991379836]
+[node name="Level1" type="Node" unique_id=1991379836]
 
 [node name="SceneObjects" type="Node" parent="." unique_id=1350468214]
 
@@ -375,10 +375,18 @@ expand_mode = 2
 [node name="Birds" type="Node" parent="." unique_id=1952633194]
 
 [node name="Bird" parent="Birds" unique_id=1068919780 instance=ExtResource("10_nfihu")]
-position = Vector2(662, 250)
+position = Vector2(728, 204)
+
+[node name="Timer" type="Timer" parent="Birds/Bird" unique_id=1452318460]
+wait_time = 3.0
+autostart = true
 
 [node name="Bird2" parent="Birds" unique_id=2002062186 instance=ExtResource("10_nfihu")]
-position = Vector2(1617, 487)
+position = Vector2(1679, 439)
+
+[node name="Timer" type="Timer" parent="Birds/Bird2" unique_id=758891372]
+wait_time = 3.0
+autostart = true
 
 [node name="Ducks" type="Node" parent="." unique_id=1221487358]
 
@@ -446,5 +454,7 @@ theme_override_font_sizes/font_size = 30
 text = "BACK TO MENU
 "
 
+[connection signal="timeout" from="Birds/Bird/Timer" to="Birds/Bird" method="_on_timer_timeout"]
+[connection signal="timeout" from="Birds/Bird2/Timer" to="Birds/Bird2" method="_on_timer_timeout"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Resume" to="PausePanel/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="PausePanel/Pause/PausePanel/VBoxContainer/Back" to="PausePanel/Pause" method="_on_back_pressed"]
