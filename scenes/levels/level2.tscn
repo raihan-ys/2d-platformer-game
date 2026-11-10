@@ -471,15 +471,16 @@ script = ExtResource("13_hgky1")
 unique_name_in_owner = true
 visible = false
 self_modulate = Color(1, 1, 1, 0.47058824)
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 902.0
-offset_bottom = 628.0
+offset_left = -4.0
+offset_top = -5.0
+offset_right = 1156.0
+offset_bottom = 654.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_c7nsj")
 
 [node name="Label" type="Label" parent="PausePanel/Pause/PausePanel" unique_id=988589775]
 layout_mode = 0
-offset_right = 898.0
+offset_left = 1.0
+offset_right = 1159.0
 offset_bottom = 147.0
 theme_override_fonts/font = ExtResource("12_hgky1")
 theme_override_font_sizes/font_size = 60

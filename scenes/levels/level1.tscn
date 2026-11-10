@@ -408,15 +408,15 @@ script = ExtResource("12_nfihu")
 unique_name_in_owner = true
 visible = false
 self_modulate = Color(1, 1, 1, 0.47058824)
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 902.0
-offset_bottom = 628.0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1154.0
+offset_bottom = 650.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nkeig")
 
 [node name="Label" type="Label" parent="PausePanel/Pause/PausePanel" unique_id=971337268]
 layout_mode = 0
-offset_right = 898.0
+offset_right = 1158.0
 offset_bottom = 147.0
 theme_override_fonts/font = ExtResource("11_nfihu")
 theme_override_font_sizes/font_size = 60
