@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -900.0
 var lives = 3
 var alive = true
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-@export var hearts : Array[Node]
+@export var hearts = Array[Node]
 
 func decrease_health():
 	lives -= 1
