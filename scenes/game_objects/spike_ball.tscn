@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dacs41furh1qn"]
+
+[ext_resource type="Texture2D" uid="uid://b16r73y62xylc" path="res://assets/traps/Chain.png" id="1_d72ex"]
+[ext_resource type="Texture2D" uid="uid://dbu7ket03wkju" path="res://assets/traps/Spiked Ball.png" id="1_yx07n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 12.0
+
+[node name="SpikeBall" type="Node2D" unique_id=1312668354]
+
+[node name="Chain" type="Sprite2D" parent="." unique_id=912097321]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, 34)
+scale = Vector2(1, 9.5)
+texture = ExtResource("1_d72ex")
+region_enabled = true
+region_rect = Rect2(0, 360, 32, 32)
+
+[node name="SpikeBall" type="Area2D" parent="." unique_id=1449635067]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpikeBall" unique_id=81175312]
+texture_filter = 1
+position = Vector2(94, 204)
+texture = ExtResource("1_yx07n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeBall" unique_id=1325039020]
+position = Vector2(95, 204)
+shape = SubResource("CircleShape2D_xrivr")
