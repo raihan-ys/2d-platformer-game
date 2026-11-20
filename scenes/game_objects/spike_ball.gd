@@ -1,7 +1,7 @@
 extends Area2D
 
 
-@export var swing_angle: float = 30.0 # Maximum swining angle
+@export var swing_angle: float = 60.0 # Maximum swining angle
 @export var swing_speed: float = 2.0
 
 @onready var player = $"../../SceneObjects/Player"

@@ -18,18 +18,15 @@ texture = ExtResource("1_d72ex")
 region_enabled = true
 region_rect = Rect2(0, 0, 8, 100)
 
-[node name="SpikeBall" type="Area2D" parent="." unique_id=1449635067]
-position = Vector2(-94.5, -113)
+[node name="Ball" type="Area2D" parent="." unique_id=1449635067]
+position = Vector2(0, 90)
 script = ExtResource("2_l7urr")
 
-[node name="Sprite2D" type="Sprite2D" parent="SpikeBall" unique_id=81175312]
+[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=81175312]
 texture_filter = 1
-position = Vector2(94, 204)
 texture = ExtResource("1_yx07n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeBall" unique_id=1325039020]
-visible = false
-position = Vector2(95, 204)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1325039020]
 shape = SubResource("CircleShape2D_xrivr")
 
-[connection signal="body_entered" from="SpikeBall" to="SpikeBall" method="_on_body_entered"]
+[connection signal="body_entered" from="Ball" to="Ball" method="_on_body_entered"]
