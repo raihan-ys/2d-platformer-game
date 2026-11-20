@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://b16r73y62xylc" path="res://assets/traps/Chain.png" id="1_d72ex"]
 [ext_resource type="Texture2D" uid="uid://dbu7ket03wkju" path="res://assets/traps/Spiked Ball.png" id="1_yx07n"]
-[ext_resource type="Script" uid="uid://0oextqnbl26b" path="res://scenes/game_objects/spike_ball.gd" id="2_l7urr"]
+[ext_resource type="Script" uid="uid://0oextqnbl26b" path="res://scenes/game_objects/swinging_spike_ball.gd" id="2_buc0s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 12.0
 
-[node name="SpikeBall" type="Node2D" unique_id=1312668354]
+[node name="SwingingSpikeBall" type="Node2D" unique_id=1312668354]
 
 [node name="Chain" type="Sprite2D" parent="." unique_id=912097321]
 texture_filter = 1
@@ -18,15 +18,15 @@ texture = ExtResource("1_d72ex")
 region_enabled = true
 region_rect = Rect2(0, 0, 8, 100)
 
-[node name="Ball" type="Area2D" parent="." unique_id=1449635067]
+[node name="SpikeBall" type="Area2D" parent="." unique_id=1449635067]
 position = Vector2(0, 90)
-script = ExtResource("2_l7urr")
+script = ExtResource("2_buc0s")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ball" unique_id=81175312]
+[node name="Sprite2D" type="Sprite2D" parent="SpikeBall" unique_id=81175312]
 texture_filter = 1
 texture = ExtResource("1_yx07n")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1325039020]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeBall" unique_id=1325039020]
 shape = SubResource("CircleShape2D_xrivr")
 
-[connection signal="body_entered" from="Ball" to="Ball" method="_on_body_entered"]
+[connection signal="body_entered" from="SpikeBall" to="SpikeBall" method="_on_body_entered"]
