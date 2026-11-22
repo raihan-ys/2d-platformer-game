@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://efs545wk8ybp" path="res://assets/terrain/Terrain (16x16).png" id="2_s1j21"]
 [ext_resource type="PackedScene" uid="uid://dj0akkaln7djy" path="res://scenes/game_objects/player.tscn" id="3_sru4k"]
 [ext_resource type="PackedScene" uid="uid://dudh1ev8js2pb" path="res://scenes/game_objects/spike.tscn" id="4_t275y"]
+[ext_resource type="PackedScene" uid="uid://lwx7p5efvlms" path="res://scenes/game_objects/finish.tscn" id="5_ah4rv"]
 [ext_resource type="PackedScene" uid="uid://dkhaaq2c30fd" path="res://scenes/game_objects/collectible.tscn" id="5_f5jb5"]
+[ext_resource type="PackedScene" uid="uid://b16gjgmpeke8e" path="res://scenes/menu/main_menu.tscn" id="6_522sc"]
 [ext_resource type="Script" uid="uid://daojo7uhy2r4m" path="res://scenes/game_objects/game_manager.gd" id="6_frjko"]
 [ext_resource type="Texture2D" uid="uid://dsnkd0k8q8usn" path="res://assets/game_elements/Heart.png" id="7_72x3h"]
 [ext_resource type="PackedScene" uid="uid://btaxbnvjeb5xh" path="res://scenes/game_objects/pig.tscn" id="7_f7rt6"]
@@ -279,6 +281,10 @@ position = Vector2(1639, 7)
 
 [node name="Collectible14" parent="SceneObjects/Collectibles" unique_id=1143856537 instance=ExtResource("5_f5jb5")]
 position = Vector2(1786, 151)
+
+[node name="Finish" parent="SceneObjects" unique_id=246845510 instance=ExtResource("5_ah4rv")]
+position = Vector2(2298, 370)
+target_level = ExtResource("6_522sc")
 
 [node name="GameManager" type="Node" parent="." unique_id=56737047]
 unique_name_in_owner = true
