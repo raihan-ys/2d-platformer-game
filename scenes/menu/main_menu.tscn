@@ -224,6 +224,7 @@ grow_horizontal = 2
 texture = ExtResource("3_hj162")
 
 [node name="Level1" type="Button" parent="." unique_id=381045209]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -242,6 +243,7 @@ text = "Level 1
 "
 
 [node name="Level2" type="Button" parent="." unique_id=1472053231]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -260,6 +262,27 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1k4da")
 text = "Level 2
 "
 
+[node name="Level3" type="Button" parent="." unique_id=1791411695]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = 77.0
+offset_right = 89.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_isoef")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_isoef")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1k4da")
+text = "Level 3
+"
+
 [node name="TileMap" type="TileMap" parent="." unique_id=185359547]
 position = Vector2(2, 1)
 scale = Vector2(3, 3)
@@ -272,3 +295,4 @@ position = Vector2(-18, 507.00003)
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level3" to="." method="_on_level_3_pressed"]

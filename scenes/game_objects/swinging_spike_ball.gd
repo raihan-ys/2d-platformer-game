@@ -12,6 +12,8 @@ var time_passed: float = 0.0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time_passed += delta
+	
+	# Radian: Satuan untuk mengukur sudut karena Node2D tidak pakai derajat
 	swing_pivot.rotation = deg_to_rad(swing_angle) * sin(
 		time_passed * swing_speed
 	)

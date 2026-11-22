@@ -225,7 +225,7 @@ tile_map_data = PackedByteArray("AAAAAA0AAAABAAAAAAABAA0AAAABAAAAAAACAA0AAAABAAA
 tile_set = SubResource("TileSet_13qdw")
 
 [node name="Player" parent="SceneObjects" unique_id=461984618 node_paths=PackedStringArray("hearts") instance=ExtResource("3_sru4k")]
-position = Vector2(461.00003, -156)
+position = Vector2(-272, 507)
 hearts = [NodePath("../../UI/Hearts/HBoxContainer/Heart1"), NodePath("../../UI/Hearts/HBoxContainer/Heart2"), NodePath("../../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/Player" unique_id=2128874735]
