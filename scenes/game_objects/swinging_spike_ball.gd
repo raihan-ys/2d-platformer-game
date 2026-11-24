@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	time_passed += delta
 	
 	# Radian: Satuan untuk mengukur sudut karena Node2D tidak pakai derajat
+	# Sin: Fungsi yang menyatakan perbandingan panjang sisi depan sudut dengan sisi miring pada segitiga siku-siku
 	swing_pivot.rotation = deg_to_rad(swing_angle) * sin(
 		time_passed * swing_speed
 	)

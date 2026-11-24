@@ -1,12 +1,21 @@
 extends CharacterBody2D
 
 
+@export var hearts: Array[Node]
+# Variable for dash forward
+@export var dash_speed: float = 900.0
+@export var dash_duration: float = 0.2
+@export var double_tap_window: float = 0.3
+
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
+const MAX_JUMPS = 2
+
+var jumps_left = MAX_JUMPS
 var lives = 3
 var alive = true
-@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-@export var hearts: Array[Node]
 
 func decrease_health():
 	lives -= 1
@@ -35,13 +44,21 @@ func _physics_process(delta: float) -> void:
 	
 	# Add the gravity.
 	if not is_on_floor():
+		# Disable jumps if player just fell off a platform
+		if jumps_left == MAX_JUMPS:
+			jumps_left -= 2
 		velocity += get_gravity() * delta
 		sprite_2d.animation = "jumping"
+	else:
+		# Reset jumps when grounded
+		jumps_left = MAX_JUMPS
 
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	# Handle jump. 
+	if Input.is_action_just_pressed("jump") and jumps_left > 0:
 		velocity.y = JUMP_VELOCITY
+		jumps_left -= 1
 
+	# Double click to dash: Check whether a second press happens within a short window
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
