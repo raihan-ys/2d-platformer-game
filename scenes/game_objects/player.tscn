@@ -246,6 +246,7 @@ animations = [{
 size = Vector2(25.333336, 30.333336)
 
 [node name="MainCharacter" type="CharacterBody2D" unique_id=461984618]
+texture_filter = 1
 scale = Vector2(3, 3)
 script = ExtResource("1_ig48j")
 

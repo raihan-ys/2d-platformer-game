@@ -213,6 +213,7 @@ grow_vertical = 2
 texture = ExtResource("3_xn6kt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1700326145]
+texture_filter = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

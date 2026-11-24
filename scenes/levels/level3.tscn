@@ -293,6 +293,7 @@ script = ExtResource("6_frjko")
 [node name="UI" type="CanvasLayer" parent="." unique_id=1744325360]
 
 [node name="Panel" type="Panel" parent="UI" unique_id=855404521]
+texture_filter = 1
 offset_left = 17.0
 offset_top = 13.0
 offset_right = 209.0
@@ -537,6 +538,7 @@ offset_bottom = 651.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_72x3h")
 
 [node name="Label" type="Label" parent="PausePanel/Pause/PausePanel" unique_id=571900716]
+texture_filter = 1
 layout_mode = 0
 offset_right = 1157.0
 offset_bottom = 147.0
@@ -563,6 +565,7 @@ theme_override_constants/separation = 40
 
 [node name="Resume" type="Button" parent="PausePanel/Pause/PausePanel/VBoxContainer" unique_id=746505266]
 process_mode = 3
+texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_hadiw")
 theme_override_font_sizes/font_size = 30
@@ -570,6 +573,7 @@ text = "RESUME"
 
 [node name="Back" type="Button" parent="PausePanel/Pause/PausePanel/VBoxContainer" unique_id=426946388]
 process_mode = 3
+texture_filter = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("9_hadiw")
 theme_override_font_sizes/font_size = 30
