@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var hearts: Array[Node]
 
-# Variables for dash forward. Error: Not finished
+# Variables for dash forward.
 @export var dash_speed: float = 900.0
 @export var dash_duration: float = 0.2
 @export var double_tap_window: float = 0.3
@@ -18,11 +18,12 @@ var jumps_left: int = MAX_JUMPS
 var lives: int = 3
 var alive: bool = true
 
-# Variables for dash forward. Error: Not finished
+# Variables for dash forward.
 var is_dashing: bool = false
 var dash_timer: float = 0.0
-var tap_timer: float = 0.0
-var last_tap_direction: float = 0.0
+var dash_direction: float = 0.0
+var last_tap_time: float = 0.0
+var last_tap_action: String = ""
 
 func decrease_health():
 	lives -= 1
@@ -48,6 +49,16 @@ func _physics_process(delta: float) -> void:
 		sprite_2d.animation = "running"
 	else :
 		sprite_2d.animation = "default"
+	
+	# ERROR: HANDLE DASHING
+	# Count down the double-tap window
+	if last_tap_time > 0.0:
+		last_tap_time -= delta
+	else:
+		last_tap_action = ""
+	
+	# Check for double-tap inputs
+	
 	
 	# Add the gravity.
 	if not is_on_floor():
