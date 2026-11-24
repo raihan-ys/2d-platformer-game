@@ -2,20 +2,27 @@ extends CharacterBody2D
 
 
 @export var hearts: Array[Node]
-# Variable for dash forward
+
+# Variables for dash forward. Error: Not finished
 @export var dash_speed: float = 900.0
 @export var dash_duration: float = 0.2
 @export var double_tap_window: float = 0.3
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -900.0
-const MAX_JUMPS = 2
+const SPEED: float = 400.0
+const JUMP_VELOCITY: int = -900.0
+const MAX_JUMPS: int = 2
 
-var jumps_left = MAX_JUMPS
-var lives = 3
-var alive = true
+var jumps_left: int = MAX_JUMPS
+var lives: int = 3
+var alive: bool = true
+
+# Variables for dash forward. Error: Not finished
+var is_dashing: bool = false
+var dash_timer: float = 0.0
+var tap_timer: float = 0.0
+var last_tap_direction: float = 0.0
 
 func decrease_health():
 	lives -= 1
